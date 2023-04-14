@@ -9,13 +9,13 @@ import { Button } from './Button/Button';
 import { Modal } from './Modal/Modal';
 
 // export class App extends Component {
-export const App = () => {
+const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [loadMore, setLoadMore] = useState(false);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState('largeImageURLmayBe');
   const per_page = 12;
@@ -63,7 +63,7 @@ export const App = () => {
       setImages(prevImages => [...prevImages, ...normalizedImages]);
       setLoadMore(page < Math.ceil(totalHits / per_page));
     } catch (error) {
-      setError(error);
+      // setError(error);
     } finally {
       setIsLoading(false);
     }
@@ -178,4 +178,5 @@ export const App = () => {
     </div>
   );
 };
+export default App;
 // }
