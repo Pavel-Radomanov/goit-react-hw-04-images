@@ -134,7 +134,7 @@ const App = () => {
   // onloadMore = () => {
   //   this.setState(prevState => ({ page: prevState.page + 1 }));
   // };
-  const openModal = largeImageURL => {
+  const openModal = (largeImageURL, tags) => {
     console.log(largeImageURL);
     setShowModal(true);
     setLargeImageURL(largeImageURL);
